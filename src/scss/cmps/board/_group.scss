@@ -1,0 +1,111 @@
+//HIDDEN D&D COMPONENT
+.egt {
+  display: flex;
+  flex-grow: 1;
+  visibility: hidden;
+}
+
+
+.group {
+  //Used as a variable to be defined through JS
+  --bgColor:#ebecf0;
+
+  //position:relative;
+  display: flex;
+  flex-flow: column;
+  max-height: 100%;
+  width: 272px;
+  min-width: 272px;
+  border-radius: 3px;
+  //ADD-TASK
+  .add-task {
+    box-shadow: $subtle-shadow;
+    border-radius: 0 0 3px 3px;
+    padding: 8px;
+    padding-block-start: 0;
+    textarea:focus{
+      outline-color: rgb(55, 127, 194);
+    }
+    button {
+      // color: #5e6c84;
+      border-radius: 0 0 3px 3px;
+      text-align: start;
+      font-size: 13.5px;
+      margin: 0;
+      padding: 5px;
+      width: 100%;
+      &:hover {
+        background: #e4e4e3;
+      }      
+    }
+    span {
+      margin-inline-end: 5px;
+      font-size: 1rem;
+    }
+    .btn-add-task {
+      width: 100%;
+    }
+    .btn-add-task:before {
+      font-family: 'fa-solid';
+      content: '\f067';
+    }
+  }
+
+  //EDIT-POPUP
+  .group-edit-popup{
+    //transform: translate(240px,35px);
+    background: #ebecf0!important ;
+    position:absolute!important;
+    //outline: none;
+    main{
+      display: flex;
+      flex-flow: column;
+      max-height: unset!important;
+      height: fit-content;
+    }
+  }
+
+  //HEADER
+  .group-header {
+    border-radius: 3px 3px 0 0;
+    font-size: 20px;
+    // padding-inline-start: 10px;
+    padding: 10px 8px;
+    min-height: 20px;
+    .editable-title {
+      color: #172b4d;
+      font-size: 14px;
+      line-height: 20px;
+      margin-left: 6px;
+    }
+  }
+  //FOOTER
+  .group-footer {
+    //background: rgba(255, 0, 0, 0.322);
+    background: $clr5;
+    display: flex;
+    flex-grow: 1;
+  }
+  //BACKGROUND
+  & > *:not(.egt) {
+    background-color: var(--bgColor);
+  }
+  & > * {
+    width: 100%;
+    margin: 0 auto;
+  }
+  //TASKS
+  .tasks-wrapper {
+    max-height: 100%;
+    overflow-y: auto;
+    .group-tasks {
+      height: 100%;
+      overflow-y: auto;
+      //overflow-y: hidden;
+      margin-inline: 4px;
+      :first-child {
+        margin-block-start: 0;
+      }
+    }
+  }
+}

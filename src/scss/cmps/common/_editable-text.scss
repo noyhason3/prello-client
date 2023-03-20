@@ -1,0 +1,45 @@
+.editable-text{
+    form {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        // padding: 0 5px;
+        justify-content: space-around;
+        font-size: 16px;
+        
+        & > *:not(:last-child){
+            margin-block-end: 10px;
+        }
+
+        textarea{
+            width: 100%;
+            border:none;
+            resize:none;
+        }
+        .editable-text-controls{
+            display: flex;
+            align-items: center;
+            width:fit-content;
+            button{border-radius: 3px;}
+            button:hover{background:#e4e4e3;}
+            button:active{background:#6b768b; color: #e4e4e3;}
+            
+        }
+        .btn{
+            margin-inline-end:10px;
+        }
+        // .save-btn{
+        //     border-radius: 4px;
+        //     margin-inline-start: 0;
+        //     background-color: $clr1;
+        //     border:2px solid $clr7;
+        //     color:$clr7;
+        //     font-weight:600;
+        // }
+    }
+}
+
+:not(.add-new-group) > .editable-text.closed{
+    background: #EBECF0;
+}

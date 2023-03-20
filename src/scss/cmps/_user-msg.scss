@@ -1,0 +1,58 @@
+.alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 23px;
+  // width: 180px;
+  padding: 20px;
+  position: fixed;
+  right: 7px;
+  bottom: 20px;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px -2px rgba(9, 30, 66, 0.25),
+    0 0 0 1px rgba(9, 30, 66, 0.25);
+  background-color: rgba(255, 255, 255, 0.781);
+  color: $clr-base;
+  font-size: 18px;
+  //   transition: height 2s;
+  // height: 80px;
+  height: 90px;
+  animation-duration: 0.3s;
+  animation-name: slidein;
+  z-index: 100;
+
+  @include for-mobile-layout {
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 90px;
+    background-color: rgba(255, 255, 255, 1);
+    animation-duration: 0.3s;
+    animation-name: slideinMobile;
+    @keyframes slideinMobile {
+      from {
+        top: -100px;
+      }
+
+      to {
+        top: 100%;
+        top: 0;
+      }
+    }
+  }
+}
+
+.alert-success {
+  //   background-color: $clr1;
+}
+@keyframes slidein {
+  from {
+    right: -100px;
+  }
+
+  to {
+    right: 100%;
+    right: 7px;
+  }
+}

@@ -1,0 +1,59 @@
+// Setup
+@import 'setup/variables';
+@import 'setup/functions';
+@import 'setup/mixins';
+@import 'setup/typography';
+@import 'setup/animations';
+
+// Basics
+@import 'basics/helpers';
+@import 'basics/layout';
+@import 'basics/base';
+@import 'basics/links';
+@import 'basics/buttons';
+@import 'basics/forms';
+@import 'basics/icons';
+
+// Components
+@import 'cmps/common/main-header';
+@import "cmps/user-form";
+@import 'cmps/task-preview';
+@import 'cmps/task-cmps/task-cover';
+@import 'cmps/task-cmps/task-title';
+@import 'cmps/task-cmps/task-checklist';
+@import 'cmps/task-cmps/popup-checklist';
+@import 'cmps/task-cmps/task_attachment';
+@import 'cmps/task-cmps/popup-cover';
+@import 'cmps/task-cmps/popup-duedate';
+@import 'cmps/task-cmps/task-duedate';
+@import 'cmps/task-cmps/popup-attachment';
+@import 'cmps/task-cmps/popup-label';
+@import 'cmps/task-cmps/task-label';
+@import 'cmps/task-cmps/popup-member';
+@import 'cmps/task-cmps/popup-member-details';
+@import 'cmps/task-cmps/task-control';
+@import 'cmps/bio';
+@import 'cmps/user-msg';
+
+//Board components
+@import 'cmps/board/board-header';
+@import 'cmps/board/board-menu';
+@import 'cmps/board/group';
+@import 'cmps/board/add-new-group';
+//Common components
+@import 'cmps/common/popup';
+@import 'cmps/common/board-search-popup';
+@import 'cmps/common/editable-text';
+@import 'cmps/common/editable-title';
+@import 'cmps/common/member-list';
+
+//Views
+@import "views/home";
+@import "views/about";
+@import "views/login-signup";
+@import "views/board-lists";
+@import "views/task";
+@import "views/board";
+@import "views/dashboard";
+
+

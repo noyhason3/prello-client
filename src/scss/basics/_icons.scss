@@ -1,0 +1,115 @@
+.icon{
+    font-size: 0.85rem;
+    &.preview{
+        font-size:rem(12px);
+    }
+    &.checklist:before{
+        font-family: 'fa-reg';
+        content:"\f14a"
+    }
+    &.member:before{
+        font-family: "fa-reg";
+        content: "\f007";
+    }
+    &.attachment:before{
+        font-family: 'fa-solid';
+        content: '\f0c6';
+    }
+    &.cover:before{
+        font-family: "fa-solid";
+        content: "\f09d";
+    }
+    &.description:before{
+        font-family: 'fa-solid';
+        content:"\f036"
+    }
+    &.title{
+      transform: scaleY(1.3);
+    }
+    &.title:before{
+        font-family: 'fa-solid';
+        content:"\f566"
+    }
+    &.label{
+        transform: rotate(270deg);
+    }
+
+    &.label:before {
+        font-family: "fa-solid";
+        content: "\f02b";
+    }
+    &.plus:before {
+        font-family: "fa-solid";
+        content: "\f067";
+    }
+    &.x-bright {
+        background-image: url(~@/assets/img/icons/x-icon-bright.svg);
+
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.x {
+        width: 15px;
+        height: 15px;
+        background-image: url(~@/assets/img/icons/x-icon.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    &.elipsis::before {
+        font-size: 0.7rem;
+        content:"•••";
+    }
+    &.comment:before {
+        font-family: "fa-reg";
+        content: "\f075";
+    }
+    &.pencil:before {
+        font-family: "fa-solid";
+        content: "\f303";
+        color:rgb(124, 124, 124);
+    }
+    &.clock:before {
+        font-family: 'fa-reg';
+        content: "\f017"
+    }
+    &.star:before {
+        font-family: 'fa-reg';
+        content: "\f005"
+    }
+    &.v:before{
+        content: "✔";
+        color:$clr1;
+    }
+    &.board:before{
+        font-family: "fa-solid";
+        content: "\f0db";       
+    }
+    &.house:before{
+        font-family: "fa-solid";
+        content: "\f015";       
+    }
+    &.search:after{
+        font-family: "fa-solid";
+        content: "\f002";       
+    }
+    &.list:after{
+        font-family: "fa-solid";
+        content: "\f0ca";       
+    }
+    &.dashboard:after{
+        font-family: "fa-solid";
+        content: "\f3fd";    
+        font-size: 0.9rem;
+    }
+    &.back:after{
+        font-family: "fa-solid";
+        content: "\f104";    
+        font-size: 1.2rem;
+    }
+
+    &.archive:before{
+        font-family: 'fa-solid';
+        content:'\f187';
+    }
+}

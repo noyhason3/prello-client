@@ -1,0 +1,290 @@
+.board-list-page {
+    //     position:absolute;
+    //     left: 0;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+
+    //     // background-color:lighten($clr5,5);
+    overflow-y: auto;   
+}
+
+.board-list-container {
+    position: relative;
+    background-color: $clr1;
+    margin: 0px auto;
+    width: fit-content;
+    padding: 60px 0px;
+    height: fit-content; 
+
+    // border-right: 1px solid rgb(187, 187, 187);
+    // border-left: 1px solid rgb(187, 187, 187);
+    .hello {
+        font-size: 1.4rem;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    input {
+        // width: 180px;
+        height: 30px;
+        border-radius: 3px;
+        border: 1px solid grey;
+        // column-span: 1;
+        // grid-column: 2/3;
+        padding:5px;
+        transition: 0.3s ease-in-out;
+        grid-column: 2/3;
+        width: 50%;
+        
+        &:hover,
+        &:active,
+        &:focus {
+            width: 100%;
+            outline:none;
+        }
+    }
+    
+
+    .starred,
+    .recent,
+    .board {
+        margin-inline-end: 10px;
+    }
+
+    .starred::before {
+        font-family: 'fa-reg';
+        content: "\f005"
+    }
+
+    .recent::before {
+        font-family: 'fa-reg';
+        content: "\f017"
+    }
+    .board::before {
+        font-family: "fa-solid";
+        content: "\f0db"; 
+    }
+
+    .btn.create-board {
+        background-color: $clr1;
+        border: 2px solid $clr-ok-btns;
+        color: $clr-ok-btns;
+        font-weight: 600;
+        outline: none;
+        
+        &.gray {
+            color: rgb(177, 177, 177);
+            border-color: rgb(177, 177, 177);
+            filter: none;
+            cursor: default;
+        }
+    }
+    
+    .btn.add-board {
+        margin: auto;
+        background-color: #dbdcdd;
+        border-radius: 3px;
+        // font-size: 0.9rem;
+        font-size: 1.5rem;
+        transition: 0.2s ease-in-out;
+        color:$clr1;
+        &:hover{
+            font-size: 1.8rem;
+
+        }
+    }
+
+    .btn.add-board,
+    .board-preview {
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn.add-board:hover {
+        filter: brightness(95%);
+    }
+
+    .board-preview {
+        position: relative;
+        margin: auto;
+        // margin-inline-end: 20px;
+        border-radius: 3px;
+        padding: 8px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #fff;
+        background-size: cover;
+        position: relative;
+        // margin-bottom: 30px;
+        cursor: pointer;
+
+
+        .toggle-starred,
+        .starred {
+            outline: none;
+            border: none;
+            background-color: transparent;
+            position: absolute;
+            bottom: 10px;
+            right: 6px;
+            margin: 0;
+            background-color: transparent;
+            transition: 0.2s;
+            color: rgba(255, 210, 86, 0.9);
+        }
+
+        .toggle-starred::before,
+        .starred::before {
+            font-family: 'fa-reg';
+            content: "\f005";
+        }
+
+        .toggle-starred {
+            right: -30px;
+            opacity: 0;
+            color: rgba(255, 255, 255, 0.6);
+            bottom:10px;
+        }
+
+        .toggle-starred.starred {
+            right: 6px;
+            opacity: 1;
+            color: rgba(255, 210, 86, 0.9);
+        }
+
+        .starred:hover {
+            transform: scale(1.2);
+            
+        }
+        
+        .toggle-starred:hover,
+        .board-options:hover {
+            transform: scale(1.2);
+            color: rgba(255, 255, 255, 1);
+        }
+        
+        &:hover {
+            filter: brightness(85%);
+            
+            .toggle-starred {
+                right: 6px;
+                opacity: 1;
+            }
+            
+            .btn.options {
+                transform:scaleY(1);
+                opacity: 1;
+                top: 10px;
+            }
+        }
+    }
+}
+
+.create-board-screen.add-board {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index:1;
+}
+
+.popup-create-board {
+    width: 600px;
+    background-color: transparent;
+    box-shadow: none;
+    position: fixed;
+    z-index:2;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+
+    .btn.close {
+        margin: 0;
+        color: $clr1;
+    }
+
+    .new-board-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        height: 150px;
+
+        .title {
+            height: 30px;
+            border-radius: 3px;
+            outline: none;
+            border: none;
+            padding-left: 8px;
+            background-color: transparent;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .title::placeholder {
+            color: rgba(255, 255, 255, 0.692);
+        }
+
+        .title:hover,
+        .title:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .title-container {
+            flex-grow:1;
+            padding: 10px 10px 10px 10px;
+            border-radius: 3px;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            margin-inline-end: 10px;
+
+        }
+
+        input[name="checkbox"] {
+            background-color: aqua;
+            margin-inline-end: 10px;
+        }
+
+        .bgStyle-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap:5px;
+            width: 150px;
+        }
+
+        .bgStyle {
+            width: 100%;
+            height: 100%;
+            border-radius: 3px;
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size:cover;
+        }
+
+        .bgStyle.selected::before {
+            content: "✔";
+            color: $clr1;
+        }
+
+        .bgStyle:hover {
+            filter: brightness(90%)
+        }
+    }
+}
